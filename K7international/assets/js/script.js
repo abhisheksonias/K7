@@ -34,7 +34,24 @@ for (let i = 0; i < navbarLinks.length; i++) {
 }
 
 
+document.addEventListener('DOMContentLoaded', function () {
+  const faqItems = document.querySelectorAll('.faq-item');
 
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    question.addEventListener('click', () => {
+      const expanded = question.getAttribute('aria-expanded') === 'true' || false;
+      question.setAttribute('aria-expanded', !expanded);
+
+      const answer = question.nextElementSibling;
+      if (!expanded) {
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      } else {
+        answer.style.maxHeight = 0;
+      }
+    });
+  });
+});
 
 
 /**
