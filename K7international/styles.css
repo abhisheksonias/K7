@@ -186,15 +186,5 @@
     max-height: 200px; /* Adjust as needed */
   }
 
-  .footer-map {
-    max-width:fit-content;
-    height: 250px;
-    overflow: hidden;
-    border-radius: 8px;
-  }
   
-  .footer-map iframe {
-    border: none;
-    border-radius: 8px;
-  }
   

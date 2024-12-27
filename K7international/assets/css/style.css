@@ -730,6 +730,23 @@ body {
   color: var(--white);
 }
 
+.footer-map {
+  flex: 1; /* Allow the map to take up available space */
+  width: auto; /* Make the map responsive */
+  max-width: 600px; /* Set a maximum width to maintain design consistency */
+  height: 250px; /* Fixed height */
+  margin: 0 auto; /* Center the map horizontally if necessary */
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.footer-map iframe {
+  height: 100%; /* Ensure the iframe's height matches the container */
+  border: none;
+  border-radius: 8px; /* Keep rounded corners */
+}
+
+
 .copyright-link {
   display: inline-block;
   text-decoration: underline;
