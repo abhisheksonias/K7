@@ -480,7 +480,7 @@ body {
 }
 
 .service-card {
-  padding: 30px;
+  padding: 10px;
   box-shadow: var(--shadow);
   border-radius: var(--radius-12);
 }
