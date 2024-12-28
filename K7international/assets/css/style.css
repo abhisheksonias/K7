@@ -683,6 +683,10 @@ body {
   gap: 10px;
 }
 
+.footer-list {
+  width: 300px;
+}
+
 .footer-top .social-link {
   background-color: var(--white);
   color: var(--winter-sky);
@@ -733,8 +737,8 @@ body {
 .footer-map {
   flex: 1; /* Allow the map to take up available space */
   width: auto; /* Make the map responsive */
-  max-width: 500px; /* Set a maximum width to maintain design consistency */
-  height: 250px; /* Fixed height */
+  max-width: 600px; /* Set a maximum width to maintain design consistency */
+  height: auto; /* Fixed height */
   margin: 0 auto; /* Center the map horizontally if necessary */
   overflow: hidden;
   border-radius: 8px;
