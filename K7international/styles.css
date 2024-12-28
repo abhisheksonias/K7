@@ -142,7 +142,7 @@
 }
 
 .faq-section .container {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -162,11 +162,12 @@
   background: none;
   border: none;
   outline: none;
-  font-size: 1.25rem;
+  font-size: 2.2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .faq-question ion-icon {
@@ -237,7 +238,6 @@
   /* Could be more or less, depending on screen size */
   max-width: 500px;
   border-radius: 8px;
-  margin-bottom: 10%;
 }
 
 .close {
@@ -282,4 +282,127 @@ form button {
 
 form button:hover {
   background-color: #218838;
+}
+
+
+/* Section styling */
+.countries-section {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+/* Container for horizontal scrolling */
+.countries-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  padding: 10px;
+  scrollbar-width: thin; /* Firefox scrollbar */
+  scrollbar-color: #ccc transparent;
+}
+
+.countries-container::-webkit-scrollbar {
+  height: 8px; /* Adjust scrollbar height */
+}
+
+.countries-container::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.countries-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Individual country boxes */
+.country-box {
+  flex: 0 0 auto; /* Prevent shrinking and allow scrolling */
+  width: 400px;
+  height: fit-content;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+}
+
+.country-box img {
+  padding: 20px;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.country-box .country-name {
+  padding: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 5%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.country-box p {
+  margin-bottom: 10%;
+  font-size: 2rem;
+  color: #666;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.country-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles */
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+  .country-box {
+    width: 300px;
+  }
+
+  .country-box .country-name {
+    font-size: 1.5rem;
+  }
+
+  .country-box p {
+    font-size: 1.5rem;
+  }
+}
+
+/* Small screens (mobile) */
+@media (max-width: 480px) {
+  .country-box {
+    width: 250px;
+    animation: slideIn 1s ease-out;
+  }
+
+  .country-box img {
+    padding: 10px;
+  }
+
+  .country-box .country-name {
+    font-size: 1.2rem;
+  }
+
+  .country-box p {
+    font-size: 1.2rem;
+  }
+
+  /* Animation for mobile */
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-50%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
 }
