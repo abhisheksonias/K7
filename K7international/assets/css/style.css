@@ -196,6 +196,7 @@ body {
   margin-block-end: 60px;
   max-width: max-content;
   margin-inline: auto;
+  justify-content: center;
 }
 .hero-blog {
   color: white;
