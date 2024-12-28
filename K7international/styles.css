@@ -84,8 +84,9 @@
   margin-left: 400px;
   color: rgb(148, 102, 255);
   padding: 10px 20px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 2rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bolder;
+  font-size: 3rem;
   border-radius: 5px;
   cursor: pointer;
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
@@ -93,7 +94,7 @@
 
 .call ion-icon {
   margin-left: 10px;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .call:hover {
@@ -102,7 +103,6 @@
 
 .call span:first-child {
   margin-right: 10px;
-  font-weight: bold;
   white-space: nowrap;
   /* Prevent line break */
 }
