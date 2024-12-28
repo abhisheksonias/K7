@@ -201,74 +201,6 @@
   padding: 30px 0;
 }
 
-.gsap__slider {
-  height: 50vh;
-}
-
-.gsap__bl {
-  width: 90%;
-}
-
-.gsap__inner,
-.gsap__track {
-  display: flex;
-}
-
-.gsap__inner {
-  width: calc(100% + var(--indent));
-}
-
-.gsap__track {
-  will-change: transform;
-}
-
-.gsap__item {
-  position: relative;
-  flex: 0 0 auto;
-  width: 750px;
-
-  background: #ffffff;
-  will-change: transform;
-}
-
-.gsap__item+.gsap__item {
-  margin-left: var(--indent);
-}
-
-.gsap__item img {
-  position: relative;
-  display: block;
-  width: 70%;
-  height: 70%;
-  object-fit: cover;
-  z-index: 2;
-  border-radius: 20px;
-}
-
-.gsap__item-num {
-  position: absolute;
-  top: 15px;
-  left: 40px;
-  font-size: 50px;
-  color: black;
-  z-index: 3;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-}
-
-
-
-
-
-.gsap_slider .content,
-.gsap_h,
-.gsap__bl,
-.gsap__inner,
-.gsap__item {
-  height: 100%;
-}
-
-
 
 
 /* Modal styles */
@@ -278,6 +210,7 @@
   position: fixed;
   /* Stay in place */
   justify-content: center;
+  align-items: center;
   z-index: 1;
   /* Sit on top */
   left: 0;
@@ -304,6 +237,7 @@
   /* Could be more or less, depending on screen size */
   max-width: 500px;
   border-radius: 8px;
+  margin-bottom: 10%;
 }
 
 .close {

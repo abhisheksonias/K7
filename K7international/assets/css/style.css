@@ -733,7 +733,7 @@ body {
 .footer-map {
   flex: 1; /* Allow the map to take up available space */
   width: auto; /* Make the map responsive */
-  max-width: 600px; /* Set a maximum width to maintain design consistency */
+  max-width: 500px; /* Set a maximum width to maintain design consistency */
   height: 250px; /* Fixed height */
   margin: 0 auto; /* Center the map horizontally if necessary */
   overflow: hidden;
