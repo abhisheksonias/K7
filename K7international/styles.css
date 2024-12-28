@@ -295,6 +295,7 @@ form button:hover {
   padding: 10px;
   scrollbar-width: thin; /* Firefox scrollbar */
   scrollbar-color: #ccc transparent;
+  justify-content: space-evenly;
 }
 
 .countries-container::-webkit-scrollbar {
@@ -316,7 +317,7 @@ form button:hover {
   width: 400px;
   height: fit-content;
   border: 2px solid #ddd;
-  border-radius: 10px;
+  border-radius: 10%;
   overflow: hidden;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -326,7 +327,7 @@ form button:hover {
 
 .country-box img {
   padding: 20px;
-  border-radius: 20px;
+  border-radius: 15%;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -334,17 +335,18 @@ form button:hover {
 
 .country-box .country-name {
   padding: 10px;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
-  color: #444;
-  margin-bottom: 5%;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: darkcyan;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .country-box p {
   margin-bottom: 10%;
+  padding: 10px;
   font-size: 2rem;
   color: #666;
+  font-style: italic;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
