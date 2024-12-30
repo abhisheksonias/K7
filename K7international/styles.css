@@ -8,7 +8,7 @@
   padding-bottom: 10px;
 }
 
-.navbar-content ion-icon{
+.navbar-social ion-icon{
   font-size: 3rem;
 
 }
@@ -42,7 +42,7 @@
 
 .navbar-item ion-icon {
   margin-right: 0.75rem;
-  font-size: 1.25rem;
+  font-size: 2.5rem;
 }
 
 .navbar-link {
