@@ -19,6 +19,27 @@
     rel="stylesheet">
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1243269303449595');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1243269303449595&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
+
 </head>
 
 <body id="top">
@@ -53,11 +74,11 @@
         <div class="navbar-content">
           <div class="navbar-item">
             <ion-icon name="mail-outline"></ion-icon>
-            <span>info@k7intl.com</span>
+            <a style="color: rgb(49, 48, 48);" href="mailto:info@k7intl.com">info@k7intl.com</a>
           </div>
           <div class="navbar-item">
             <ion-icon name="call-outline"></ion-icon>
-            <span>+91 98257 10288</span>
+            <a style="color: rgb(51, 50, 50);" href="tel:+919825710288">+91 98257 10288</a>
           </div>
           <div class="navbar-item">
             <ion-icon name="time-outline"></ion-icon>
@@ -81,7 +102,7 @@
       </nav>
       <!-- End of Nav for Mobile   -->
 
-      <a href="#" class="call">
+      <a href="tel:+919825710288" class="call">
         <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
         <span>+91 98257 10288</span>
       </a>
@@ -94,30 +115,30 @@
 
       <div id="bookingModal" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Book Your Seat</h2>
-            <form id="bookingForm">
-                <label for="name">Name:</label>
-                
-                <input placeholder="Enter your name"type="text" id="name" name="name" required>
-    
-                <label for="number">Contact Number:</label>
-                <input placeholder="Enter your Contact Number" type="tel" id="number" name="number" required>
-    
-                <label for="email">Email ID:</label>
-                <input placeholder="Enter Your Email ID" type="email" id="email" name="email" required>
-    
-                <label for="course">Prefered course Course:</label>
-                <select id="course" name="course" required>
-                    <option value="undergraduate">Undergraduate</option>
-                    <option value="postgraduate">Postgraduate</option>
-                    <option value="diploma">Diploma</option>
-                </select>
-    
-                <button type="submit">Submit</button>
-            </form>
+          <span class="close">&times;</span>
+          <h2>Book Your Seat</h2>
+          <form id="bookingForm">
+            <label for="name">Name:</label>
+
+            <input placeholder="Enter your name" type="text" id="name" name="name" required>
+
+            <label for="number">Contact Number:</label>
+            <input placeholder="Enter your Contact Number" type="tel" id="number" name="number" required>
+
+            <label for="email">Email ID:</label>
+            <input placeholder="Enter Your Email ID" type="email" id="email" name="email" required>
+
+            <label for="course">Prefered course Course:</label>
+            <select id="course" name="course" required>
+              <option value="undergraduate">Undergraduate</option>
+              <option value="postgraduate">Postgraduate</option>
+              <option value="diploma">Diploma</option>
+            </select>
+
+            <button type="submit">Submit</button>
+          </form>
         </div>
-    </div>
+      </div>
 
       <button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn>
         <ion-icon name="menu-outline"></ion-icon>
@@ -146,13 +167,15 @@
               Meet Top-Ranked Universities under one roof
             </p>
 
-            <p class="hero-subtitle"><span style="color: azure; padding-bottom: 10px;">Join us on </span> <span style="font-size: 23px; font-weight: bolder;">2nd February
-              2025, 10 AM to 4 PM <br> Hotel Saraza, Rajkot </span><span style="color: azure; padding-top: 10px;">Reserve your spot
-                now!</span> </p> 
+            <p class="hero-subtitle"><span style="color: azure; padding-bottom: 10px;">Join us on </span> <span
+                style="font-size: 23px; font-weight: bolder;">2nd February
+                2025 <span style="font-size: 15px; color: aliceblue;">10 AM to 4 PM</span>Hotel Saraza, Rajkot </span><span
+                style="color: azure; padding-top: 10px;">Reserve your spot
+                now!</span> </p>
 
-                <a href="#" class="btn" style="width: fit-content;">
-                   <span>Book seat Now</span>
-                </a>
+            <a href="#" class="btn" style="width: fit-content;">
+              <span>Book seat Now</span>
+            </a>
 
           </div>
 
@@ -176,14 +199,12 @@
         <div class="container">
 
           <figure class="about-banner">
-            <img style="border-radius: 100%;" src="./assets/images/about.jpg" width="700" height="532" loading="lazy" alt="about banner"
-              class="w-100 banner-animation">
+            <img style="border-radius: 100%;" src="./assets/images/about.jpg" width="700" height="532" loading="lazy"
+              alt="about banner" class="w-100 banner-animation">
           </figure>
 
           <div class="about-content">
-
-            <h2 class="h2 section-title underline">Why You Can’t Miss This Opportunity!
-            </h2>
+            <h2 class="h2 section-title underline">Why You Can’t Miss This Opportunity!</h2>
 
             <ul class="about-text">
               <li>• Meet Global University Representatives</li>
@@ -192,7 +213,7 @@
               <li>• Scholarship
               </li>
               <li>• Best coaching in Saurashtra (IELTS,PTE,GRE,TOEFL)</li>
-              
+
               <li>• 700+ Universities Worldwide</li>
               <li>• Attend the fair to enjoy special offers available only on the day!</li>
             </ul>
@@ -227,7 +248,20 @@
         </div>
       </section>
 
+<!-- call for action -->
+      <section class="book">
+        <div class=" container action">
+          <a href="#" class="btn" style="width: fit-content;">
+            <span>Book seat Now</span>
+          </a>
 
+          <a href="tel:+919825710288" class="btn" style="width: fit-content;">
+            <span>98257 10288</span>
+          </a>
+        </div>
+      </section>
+<!-- call for action end -->
+ 
       <section class="video-section">
         <div class="container">
           <h2 class="section-title underline" style="font-size: 25px;">Glimpse from Previous Year!</h2>
@@ -243,7 +277,7 @@
 
 
 
-      
+
       <!-- 
         - #SERVICES -->
 
@@ -264,20 +298,20 @@
                 <h3 class="h3 title">Attend the fair to enjoy special offers available only on the day!
                 </h3> -->
 
-                <!-- <p class="text">
+      <!-- <p class="text">
                   Mauris ut felis malesuada eros varius tristique a at orci. Nulla vulputate, leo sit amet rhoncus
                   suscipit, enim ex
                   venenatis ipsum, et porttitor.
                 </p> -->
 
-                <!-- <button class="card-btn" aria-label="Show More">
+      <!-- <button class="card-btn" aria-label="Show More">
                   <ion-icon name="chevron-forward-outline"></ion-icon>
                 </button> -->
 
-              <!-- </div>
+      <!-- </div>
             </li> -->
 
-            <!-- <li>
+      <!-- <li>
               <div class="service-card">
 
                 <div class="card-icon">
@@ -299,7 +333,7 @@
               </div>
             </li> -->
 
-            <!-- <li>
+      <!-- <li>
               <div class="service-card">
 
                 <div class="card-icon">
@@ -322,37 +356,36 @@
               </div>
             </li> -->
 
-          <!-- </ul>
+      <!-- </ul>
 
         </div>
       </section> -->
 
 
       <section class="countries-section">
-        <h2 class=" h2 section-title underline">Countries We Offer</h2>
+        <h2 class=" h2 section-title underline">Study Opportunities in These Countries</h2>
         <div class="countries-container">
           <div class="country-box">
             <img src="./assets/img/country-1.jpg" alt="Country 1">
             <span class="country-name">USA</span>
             <p>Elevate your skills with top-notch coaching in the USA.</p>
           </div>
-          
+
           <div class="country-box">
             <img src="./assets/img/country-5.jpg" alt="Country 3">
             <span class="country-name">Australia</span>
             <p>Discover your potential with transformative coaching in Australia.</p>
           </div>
-          
+
           <div class="country-box">
             <img src="./assets/img/country-2.jpg" alt="Country 5">
             <span class="country-name">UK</span>
             <p>Empowering growth through exceptional coaching in the UK.</p>
           </div>
-  
-          <!-- Add more countries as needed -->
+
         </div>
       </section>
-      
+
 
 
 
@@ -370,7 +403,9 @@
                 <ion-icon name="chevron-down-outline"></ion-icon>
               </button>
               <div class="faq-answer">
-                <p>The GEF 2025 is a unique annual event organized by K7, where students can have one-on-one meetings with university representatives to gain valuable insights into courses, tuition fees, scholarships, and secure on-spot admission.</p>
+                <p>The GEF 2025 is a unique annual event organized by K7, where students can have one-on-one meetings
+                  with university representatives to gain valuable insights into courses, tuition fees, scholarships,
+                  and secure on-spot admission.</p>
               </div>
             </div>
             <div class="faq-item">
@@ -379,7 +414,10 @@
                 <ion-icon name="chevron-down-outline"></ion-icon>
               </button>
               <div class="faq-answer">
-                <p>Students from grades 9 to 12, undergraduate (UG), and postgraduate (PG) aspirants, along with their parents, are welcome to attend. Additionally, anyone planning to study abroad, including professionals or students exploring streams such as science, commerce, arts, IT, engineering, or any other domain, can participate..</p>
+                <p>Students from grades 9 to 12, undergraduate (UG), and postgraduate (PG) aspirants, along with their
+                  parents, are welcome to attend. Additionally, anyone planning to study abroad, including professionals
+                  or students exploring streams such as science, commerce, arts, IT, engineering, or any other domain,
+                  can participate..</p>
               </div>
             </div>
             <div class="faq-item">
@@ -388,7 +426,8 @@
                 <ion-icon name="chevron-down-outline"></ion-icon>
               </button>
               <div class="faq-answer">
-                <p>Yes, this event provides complete guidance about education loans and financing options for studying abroad.</p>
+                <p>Yes, this event provides complete guidance about education loans and financing options for studying
+                  abroad.</p>
               </div>
             </div>
             <div class="faq-item">
@@ -397,12 +436,31 @@
                 <ion-icon name="chevron-down-outline"></ion-icon>
               </button>
               <div class="faq-answer">
-                <p>Register directly to confirm your participation. Please note that while the event is free, prior registration is mandatory.</p>
+                <p>Register directly to confirm your participation. Please note that while the event is free, prior
+                  registration is mandatory.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+
+
+
+<!-- call for action -->
+<section class="book2">
+  <div class="container action">
+    <a href="#" class="btn" style="width: fit-content;">
+      <span>Book seat Now</span>
+    </a>
+
+    <a href="tel:+919825710288" class="btn" style="width: fit-content;">
+      <span>98257 10288</span>
+    </a>
+  </div>
+</section>
+<!-- call for action end -->
+
 
       <!-- 
     - #FOOTER
@@ -421,7 +479,7 @@
 
               <p class="text" style="font-weight: 600 ; ">
                 Let’s Build Your Tomorrow Together
-                
+
               </p>
               <p class="text">
                 Your trusted partner in unlocking global education opportunities.
@@ -451,7 +509,7 @@
                     <ion-icon name="logo-youtube"></ion-icon>
                   </a>
                 </li>
-                
+
 
 
               </ul>
