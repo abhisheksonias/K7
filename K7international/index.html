@@ -1,442 +1,614 @@
-/* General Navbar Styles */
-
-.navbar-content{
-  margin-top: 30px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 2rem;
-  padding-top: 10px ;
-  padding-bottom: 10px;
-}
-
-.navbar-social ion-icon{
-  font-size: 3rem;
-
-}
-.navbar {
-  background-color: var(--white);
-  position: fixed;
-  top: 0;
-  left: -280px;
-  /* Hidden by default */
-  width: 100%;
-  max-width: 280px;
-  min-height: 100%;
-  padding: 2rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  z-index: 2;
-  transition: transform 0.25s ease-in-out, visibility 0.25s ease-in-out;
-  visibility: hidden;
-}
-
-.navbar.active {
-  transform: translateX(280px);
-  /* Slide-in effect */
-  visibility: visible;
-}
-
-.navbar-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1.5rem;
-}
-
-.navbar-item ion-icon {
-  margin-right: 0.75rem;
-  font-size: 2.5rem;
-}
-
-.navbar-link {
-  color: var(--space-cadet-1);
-  font-size: 1rem;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.navbar-social {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 2rem;
-}
-
-.navbar-social a {
-  color: inherit;
-  text-decoration: none;
-  font-size: 1.5rem;
-  transition: color 0.2s ease-in-out;
-}
-
-.navbar-social a:hover {
-  color: #00A797;
-  /* Add hover effect */
-}
-
-/* Responsive: Navbar Visibility on Mobile */
-@media (max-width: 768px) {
-  .navbar {
-    display: block;
-  }
-}
-
-/* Call Button Styles */
-.call {
-  display: flex;
-  align-items: center;
-  margin-left: 400px;
-  color: rgb(148, 102, 255);
-  padding: 10px 20px;
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: bolder;
-  font-size: 3rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-}
-
-.call ion-icon {
-  margin-left: 10px;
-  font-size: 3rem;
-}
-
-.call:hover {
-  color: #00A797;
-}
-
-.call span:first-child {
-  margin-right: 10px;
-  white-space: nowrap;
-  /* Prevent line break */
-}
-
-/* Hide Call Button on Mobile View */
-@media (max-width: 768px) {
-  .call {
-    display: none;
-  }
-}
-
-
-.video-section {
-  padding: 30px 0;
-  background-color: #dedede;
-  text-align: center;
-  border-radius: 30px;
-}
-
-.video-section {
-  max-width: 90%;
-  margin: 0 auto;
-}
-
-
-.video-wrapper {
-  position: relative;
-  padding-bottom: 56.25%;
-  /* 16:9 aspect ratio */
-  height: 0;
-  overflow: hidden;
-  max-width: 100%;
-}
-
-.video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-  border-radius: 20px;
-}
-
-
-
-.faq-section {
-  padding: 50px 0;
-  background-color: #f9f9f9;
-}
-
-.faq-section .container {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-
-.faq {
-  border-top: 1px solid #ddd;
-}
-
-.faq-item {
-  border-bottom: 1px solid #ddd;
-}
-
-.faq-question {
-  width: 100%;
-  padding: 15px;
-  text-align: left;
-  background: none;
-  border: none;
-  outline: none;
-  font-size: 2.2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.faq-question ion-icon {
-  transition: transform 0.3s ease;
-}
-
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-  padding: 0 15px;
-}
-
-.faq-answer p {
-  margin: 15px 0;
-}
-
-.faq-question[aria-expanded="true"] ion-icon {
-  transform: rotate(180deg);
-}
-
-.faq-question[aria-expanded="true"]+.faq-answer {
-  max-height: 200px;
-  /* Adjust as needed */
-}
-
-/* Modal Styling */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
-  justify-content: center;
-  align-items: center; 
-  text-align: start;
-}
-
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  max-width: 500px;
-  border-radius: 8px;
-}
-
-.close {
-  color: #aaa;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-
-form label {
-  margin-top: 10px;
-}
-
-form input,
-form select,
-form button {
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-form button {
-  background-color: #28a745;
-  color: white;
-  border: none;
-  cursor: pointer;
-  margin-top: 20px;
-}
-
-form button:hover {
-  background-color: #218838;
-}
-
-
-
-/* Section styling */
-.countries-section {
-  padding: 40px 20px;
-  background-color: #f9f9f9;
-  text-align: center;
-}
-
-/* Container for horizontal scrolling */
-.countries-container {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto; /* Enable horizontal scrolling */
-  padding: 10px;
-  scrollbar-width: thin; /* Firefox scrollbar */
-  scrollbar-color: #ccc transparent;
-  justify-content: space-evenly;
-}
-
-.countries-container::-webkit-scrollbar {
-  height: 8px; /* Adjust scrollbar height */
-}
-
-.countries-container::-webkit-scrollbar-thumb {
-  background: #ccc;
-  border-radius: 4px;
-}
-
-.countries-container::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-/* Individual country boxes */
-.country-box {
-  flex: 0 0 auto; /* Prevent shrinking and allow scrolling */
-  width: 400px;
-  height: fit-content;
-  border: 2px solid #ddd;
-  border-radius: 10%;
-  overflow: hidden;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background-color: #fff;
-}
-
-.country-box img {
-  padding: 20px;
-  border-radius: 15%;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.country-box .country-name {
-  padding: 10px;
-  font-size: 3rem;
-  font-weight: bold;
-  color: darkcyan;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.country-box p {
-  margin-bottom: 10%;
-  padding: 10px;
-  font-size: 2rem;
-  color: #666;
-  font-style: italic;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.country-box:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Responsive Styles */
-
-/* Medium screens (tablets) */
-@media (max-width: 768px) {
-  .country-box {
-    width: 300px;
-  }
-
-  .country-box .country-name {
-    font-size: 1.5rem;
-  }
-
-  .country-box p {
-    font-size: 1.5rem;
-  }
-}
-
-/* Small screens (mobile) */
-@media (max-width: 480px) {
-  .country-box {
-    width: 250px;
-    animation: slideIn 1s ease-out;
-  }
-
-  .country-box img {
-    padding: 10px;
-  }
-
-  .country-box .country-name {
-    font-size: 1.2rem;
-  }
-
-  .country-box p {
-    font-size: 1.2rem;
-  }
-
-  /* Animation for mobile */
-  @keyframes slideIn {
-    0% {
-      transform: translateX(-50%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-}
-
-
-.book {
-  background-color: hsl(239, 87%, 69%); /* Light gray background */
-  padding: 30px 0;
-  text-align: center;
-  margin-bottom: 20px;
-  border-radius: 20px;
-}
-
-.book .action {
-  max-width: 800px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  gap: 20px; /* Space between buttons */
-  justify-content: space-evenly;
-}
-
-
-
-.book2 {
-  background-color: hsl(239, 87%, 69%); /* Light gray background */
-  padding: 30px 0;
-  text-align: center;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-
-.book2 .action {
-  max-width: 800px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  gap: 20px; /* Space between buttons */
-  justify-content: space-evenly;
-}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Education Fair - K7</title>
+
+  <link rel="shortcut icon" href="./fevicon.png" type="image/svg+xml">
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Source+Sans+Pro:wght@600;700&display=swap"
+    rel="stylesheet">
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1243269303449595');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1243269303449595&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
+
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <div class="overlay" data-overlay></div>
+
+      <div class="logo">
+        <a href="index.html">
+          <img src="./fevicon.png" alt="logo" class="logo">
+        </a>
+      </div>
+
+      <!-- Nav for Mobile  -->
+      <nav class="navbar" data-navbar>
+        <div class="navbar-top logo">
+          <a href="index.html">
+            <img src="./fevicon.png" alt="logo" class="logo">
+          </a>
+
+          <button class="nav-close-btn" aria-label="Close Menu" data-nav-close-btn>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+        </div>
+
+        <div class="navbar-content">
+          <div class="navbar-item">
+            <ion-icon name="mail-outline"></ion-icon>
+            <a style="color: rgb(49, 48, 48);" href="mailto:info@k7intl.com">info@k7intl.com</a>
+          </div>
+          <div class="navbar-item">
+            <ion-icon name="call-outline"></ion-icon>
+            <a style="color: rgb(51, 50, 50);" href="tel:+919825710288">+91 98257 10288</a>
+          </div>
+          <div class="navbar-item">
+            <ion-icon name="time-outline"></ion-icon>
+            <span>Mon - Sat: 10 AM - 7 PM</span>
+          </div>
+          <div class="navbar-social">
+            <a href="https://www.instagram.com/k7.international/" target="_blank">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            <a href="https://www.facebook.com/K7.International.Studyabroad" target="_blank">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+            <a href="https://www.linkedin.com/company/k7intl/" target="_blank">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+            <a href="https://youtube.com/@k7international394" target="_blank">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </div>
+        </div>
+      </nav>
+      <!-- End of Nav for Mobile   -->
+
+      <a href="tel:+919825710288" class="call">
+        <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+        <span>+91 98257 10288</span>
+      </a>
+
+      <!-- Book Seat Now Button -->
+      <a href="#" class="btn" id="bookNowBtn">
+        <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
+        <span>Book seat Now</span>
+      </a>
+
+      <div id="bookingModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Book Your Seat</h2>
+          <form id="bookingForm">
+            <label for="name">Name:</label>
+
+            <input placeholder="Enter your name" type="text" id="name" name="name" required>
+
+            <label for="number">Contact Number:</label>
+            <input placeholder="Enter your Contact Number" type="tel" id="number" name="number" required>
+
+            <label for="email">Email ID:</label>
+            <input placeholder="Enter Your Email ID" type="email" id="email" name="email" required>
+
+            <label for="course">Prefered Country:</label>
+            <select id="course" name="course" required>
+              <option value="undergraduate">USA</option>
+              <option value="postgraduate">UK</option>
+              <option value="diploma">Australia</option>
+              <option value="diploma">Germany</option>
+              <option value="diploma">France</option>
+              <option value="diploma">Canada</option>
+            </select>
+
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+
+      <button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+    </div>
+  </header>
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="hero" id="home">
+        <div class="container">
+
+          <div class="hero-content">
+
+
+            <h2 class="h2 hero-title">Global Education Fair 2025</h2>
+
+            <p class="hero-text">
+              Meet Top-Ranked Universities under one roof
+            </p>
+
+            <p class="hero-subtitle"><span style="color: azure; padding-bottom: 10px;">Join us on </span> <span
+                style="font-size: 23px; font-weight: bolder;">2nd February
+                2025 <span style="font-size: 15px; color: aliceblue;">10 AM to 4 PM</span>Hotel Saraza, Rajkot </span><span
+                style="color: azure; padding-top: 10px;">Reserve your spot
+                now!</span> </p>
+
+            <a href="#" class="btn" style="width: fit-content;">
+              <span>Book seat Now</span>
+            </a>
+
+          </div>
+
+          <figure class="hero-banner">
+            <img src="./assets/images/girl.png" width="694" height="529" loading="lazy" alt="hero-banner"
+              class="w-100 banner-animation">
+          </figure>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section class="section about" id="about">
+        <div class="container">
+
+          <figure class="about-banner">
+            <img style="border-radius: 100%;" src="./assets/images/about.jpg" width="700" height="532" loading="lazy"
+              alt="about banner" class="w-100 banner-animation">
+          </figure>
+
+          <div class="about-content">
+            <h2 class="h2 section-title underline">Why You Can’t Miss This Opportunity!</h2>
+
+            <ul class="about-text">
+              <li>• Meet Global University Representatives</li>
+              <li>• Connect with Experienced K7 Counselors</li>
+              <li>• On-the-spot admission</li>
+              <li>• Scholarship
+              </li>
+              <li>• Best coaching in Saurashtra (IELTS,PTE,GRE,TOEFL)</li>
+
+              <li>• 700+ Universities Worldwide</li>
+              <li>• Attend the fair to enjoy special offers available only on the day!</li>
+            </ul>
+
+
+
+
+            <ul class="stats-list">
+
+              <li class="stats-card">
+                <p class="h3 stats-title">42.7 cr+</p>
+
+                <p class="stats-text">Scholarship</p>
+              </li>
+
+              <li class="stats-card">
+                <p class="h3 stats-title">98%</p>
+
+                <p class="stats-text">Visa success rate</p>
+              </li>
+
+              <li class="stats-card">
+                <p class="h3 stats-title">25+</p>
+
+                <p class="stats-text">Years of Experience</p>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+      </section>
+
+<!-- call for action -->
+      <section class="book">
+        <div class=" container action">
+          <a href="#" class="btn" style="width: fit-content;">
+            <span>Book seat Now</span>
+          </a>
+
+          <a href="tel:+919825710288" class="btn" style="width: fit-content;">
+            <span>98257 10288</span>
+          </a>
+        </div>
+      </section>
+<!-- call for action end -->
+ 
+      <section class="video-section">
+        <div class="container">
+          <h2 class="section-title underline" style="font-size: 25px;">Glimpse from Previous Year!</h2>
+          <div class="video-wrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/xWw4DaaUo8w?si=W6jwmFYMeGUUh_lq"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #SERVICES -->
+
+      <!-- <section class="section service" id="services">
+        <div class="container">
+
+          <h2 class="h2 section-title underline">Special Offers for Attendees</h2>
+
+          <ul class="service-list" style="justify-content: center; display: flex;">
+
+            <li >
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <ion-icon name="pricetag-outline"></ion-icon>
+                </div>
+
+                <h3 class="h3 title">Attend the fair to enjoy special offers available only on the day!
+                </h3> -->
+
+      <!-- <p class="text">
+                  Mauris ut felis malesuada eros varius tristique a at orci. Nulla vulputate, leo sit amet rhoncus
+                  suscipit, enim ex
+                  venenatis ipsum, et porttitor.
+                </p> -->
+
+      <!-- <button class="card-btn" aria-label="Show More">
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+                </button> -->
+
+      <!-- </div>
+            </li> -->
+
+      <!-- <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <ion-icon name="gift-outline"></ion-icon>
+                </div>
+
+                <h3 class="h3 title">With Fees Refundable Offer</h3>
+
+                <p class="text">
+                  Mauris ut felis malesuada eros varius tristique a at orci. Nulla vulputate, leo sit amet rhoncus
+                  suscipit, enim ex
+                  venenatis ipsum, et porttitor.
+                </p>
+
+                <button class="card-btn" aria-label="Show More">
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+                </button>
+
+              </div>
+            </li> -->
+
+      <!-- <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <ion-icon name="trophy-outline"></ion-icon>
+                </div>
+
+                <h3 class="h3 title">exciting prizes!
+                </h3>
+
+                <p class="text">
+                  Mauris ut felis malesuada eros varius tristique a at orci. Nulla vulputate, leo sit amet rhoncus
+                  suscipit, enim ex
+                  venenatis ipsum, et porttitor.
+                </p>
+
+                <button class="card-btn" aria-label="Show More">
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+                </button>
+
+              </div>
+            </li> -->
+
+      <!-- </ul>
+
+        </div>
+      </section> -->
+
+
+      <section class="countries-section">
+        <h2 class=" h2 section-title underline">Study Opportunities in These Countries</h2>
+        <div class="countries-container">
+          <div class="country-box">
+            <img src="./assets/img/country-1.jpg" alt="Country 1">
+            <span class="country-name">USA</span>
+            <p>Elevate your skills with top-notch coaching in the USA.</p>
+          </div>
+
+          <div class="country-box">
+            <img src="./assets/img/country-5.jpg" alt="Country 3">
+            <span class="country-name">Australia</span>
+            <p>Discover your potential with transformative coaching in Australia.</p>
+          </div>
+
+          <div class="country-box">
+            <img src="./assets/img/country-2.jpg" alt="Country 5">
+            <span class="country-name">UK</span>
+            <p>Empowering growth through exceptional coaching in the UK.</p>
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+
+
+      <section class="faq-section">
+        <div class="container">
+          <h2 class="h2 section-title underline">Frequently Asked Questions</h2>
+          <div class="faq">
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>What is GEF 2025 (Global Education Fair)?
+                </span>
+                <ion-icon name="chevron-down-outline"></ion-icon>
+              </button>
+              <div class="faq-answer">
+                <p>The GEF 2025 is a unique annual event organized by K7, where students can have one-on-one meetings
+                  with university representatives to gain valuable insights into courses, tuition fees, scholarships,
+                  and secure on-spot admission.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>Who Can Attend GEF 2025?</span>
+                <ion-icon name="chevron-down-outline"></ion-icon>
+              </button>
+              <div class="faq-answer">
+                <p>Students from grades 9 to 12, undergraduate (UG), and postgraduate (PG) aspirants, along with their
+                  parents, are welcome to attend. Additionally, anyone planning to study abroad, including professionals
+                  or students exploring streams such as science, commerce, arts, IT, engineering, or any other domain,
+                  can participate..</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>Can You Get Information About Loans or Finance?</span>
+                <ion-icon name="chevron-down-outline"></ion-icon>
+              </button>
+              <div class="faq-answer">
+                <p>Yes, this event provides complete guidance about education loans and financing options for studying
+                  abroad.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>How to Participate in GEF 2025? What is the Entry Fee?</span>
+                <ion-icon name="chevron-down-outline"></ion-icon>
+              </button>
+              <div class="faq-answer">
+                <p>Register directly to confirm your participation. Please note that while the event is free, prior
+                  registration is mandatory.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+<!-- call for action -->
+<section class="book2">
+  <div class="container action">
+    <a href="#" class="btn" style="width: fit-content;">
+      <span>Book seat Now</span>
+    </a>
+
+    <a href="tel:+919825710288" class="btn" style="width: fit-content;">
+      <span>98257 10288</span>
+    </a>
+  </div>
+</section>
+<!-- call for action end -->
+
+
+      <!-- 
+    - #FOOTER
+  -->
+
+      <footer class="footer">
+
+        <div class="footer-top section">
+          <div class="container">
+
+            <div class="footer-brand">
+
+              <a href="#" class="logo">
+                <img src="./fevicon.png" alt="logo" class="logo">
+              </a>
+
+              <p class="text" style="font-weight: 600 ; ">
+                Let’s Build Your Tomorrow Together
+
+              </p>
+              <p class="text">
+                Your trusted partner in unlocking global education opportunities.
+              </p>
+
+              <ul class="social-list">
+
+                <li>
+                  <a href="https://www.facebook.com/K7.International.Studyabroad" class="social-link">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="https://www.instagram.com/k7.international/" class="social-link">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="https://www.linkedin.com/company/k7intl/" class="social-link">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://youtube.com/@k7international394" class="social-link">
+                    <ion-icon name="logo-youtube"></ion-icon>
+                  </a>
+                </li>
+
+
+
+              </ul>
+
+            </div>
+
+
+            <ul class="footer-list">
+
+              <li>
+                <p class="footer-list-title">Contact Us</p>
+              </li>
+
+              <li class="footer-item">
+
+                <div class="footer-item-icon">
+                  <ion-icon name="call"></ion-icon>
+                </div>
+
+                <div>
+                  <a href="tel:+919825710288" class="footer-item-link">+91 98257 10288</a>
+                </div>
+
+              </li>
+
+              <li class="footer-item">
+
+                <div class="footer-item-icon">
+                  <ion-icon name="mail"></ion-icon>
+                </div>
+
+                <div>
+                  <a href="mailto:info@k7intl.com" class="footer-item-link">info@k7intl.com</a>
+                </div>
+
+              </li>
+
+              <li class="footer-item">
+
+                <div class="footer-item-icon">
+                  <ion-icon name="location"></ion-icon>
+                </div>
+
+                <address class="footer-item-link">
+                  3rd Floor, Business Plaza, Kalavad Rd, opp. Parimal School
+                </address>
+
+              </li>
+
+            </ul>
+            <div class="footer-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14767.375814470046!2d70.76197506542866!3d22.283900199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959ca33bb0162ad%3A0x6af4643533f8a057!2sK7%20International!5e0!3m2!1sen!2sin!4v1735306519960!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="copyright">
+            &copy; 2024 <a href="https://www.abhisheksoni.tech/" class="copyright-link">abhisheksoni.tech</a>. All Right
+            Reserved
+          </p>
+        </div>
+
+      </footer>
+
+
+
+
+
+      <!-- 
+    - #GO TO TOP
+  -->
+
+      <a href="#top" class="go-top  active" aria-label="Go To Top" data-go-top>
+        <ion-icon name="arrow-up-outline"></ion-icon>
+      </a>
+
+
+
+
+
+      <!-- 
+    - custom js link
+  -->
+      <script src="./assets/js/script.js"></script>
+
+      <!-- 
+    - ionicon link
+  -->
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
