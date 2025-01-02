@@ -414,7 +414,7 @@ form button:hover {
   padding: 30px 0;
   text-align: center;
   border-radius: 20px;
-  margin: 0 10px 20px 10px;
+  margin: 5px;
 }
 
 .book2 .action {
@@ -462,15 +462,13 @@ form button:hover {
     padding: 30px 0;
     text-align: center;
     border-radius: 20px;
-    margin: 0 10px 0 10px;
+    margin: 5px;
   }
 
   .book1 .action {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0;
     display: flex;
-    justify-content: center;
-    gap: 20px; /* Space between buttons */
     justify-content: space-evenly;
   }
 }
